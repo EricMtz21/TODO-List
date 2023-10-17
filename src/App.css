@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Manrope&display=swap");
+
+:root {
+  --color-1: #343434;
+  --color-2: #FACF5A;
+  --color-3: #4F9DA6;
+  --color-4: #FF5959;
+}
 
 html {
-  background-color: #FAF3F0;
-  width: 100%;
-  height: 100%;
+  background-color: var(--color-1);
+  width: 100vw;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
 }
 
 body {
@@ -15,16 +24,145 @@ body {
 }
 
 h1 {
-  color: #FFCACC;
-  font-family: 'Kanit', sans-serif;
+  color: var(--color-2);
+  font-family: "Kanit", sans-serif;
   text-align: center;
 }
 
+.session {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .container {
-  margin-top: 280px;
-  background-color: #FAF3F0;
+  color: var(--color-2);
+  margin: 0 auto;
+  background-color: var(--color-1);
   width: 400px;
-  height: 400px;
+  height: 450px;
   border-radius: 3px;
-  box-shadow: 15px 15px 15px 5px #FFCACC;
+  box-shadow: 
+  15px -15px 15px 2px var(--color-3),
+  15px 15px 15px 2px var(--color-2), 
+  -15px -15px 15px 2px var(--color-4),
+  -15px 15px 15px 2px var(--color-2);
+}
+
+.container-2 {
+  color: var(--color-2);
+  margin: 0 auto;
+  background-color: var(--color-1);
+  width: 400px;
+  height: 610px;
+  border-radius: 3px;
+  box-shadow: 
+  15px -15px 15px 2px var(--color-3),
+  15px 15px 15px 2px var(--color-2), 
+  -15px -15px 15px 2px var(--color-4),
+  -15px 15px 15px 2px var(--color-2);
+}
+
+.custom-input {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+
+.custom-input input {
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-1);
+  box-shadow: 4px 4px 1px var(--color-2);
+  padding-left: 10px;
+  color: var(--color-2);
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+}
+
+.custom-input input::placeholder {
+  color: var(--color-2);
+}
+
+.custom-input input:focus {
+  outline: none;
+}
+
+.icons {
+  color: var(--color-2);
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+}
+
+.inputs-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-input-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 60%;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--color-2);
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  --spread: 10px;
+  transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--color-4);
+  width: 18px;
+  height: 18px;
+  box-shadow: -3px -3px var(--spread) 0px var(--color-4),
+  0 -3px var(--spread) 0px var(--color-2), 3px -3px var(--spread) 0px var(--color-3),
+  3px 0 var(--spread) 0px var(--color-3), 3px 3px var(--spread) 0px var(--color-4),
+  0 3px var(--spread) 0px var(--color-3), -3px 3px var(--spread) 0px var(--color-3);
+}
+
+label {
+  padding-left: 10px;
+}
+
+.custom-input-2 button{
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-2);
+  color: var(--color-1);
+  font-weight: bold;
+  font-family: "Manrope", sans-serif;
+  transition: all 0.2s;
+}
+
+.custom-input-2 button:active {
+  margin-top: 5px;
+  background-color: var(--color-4);
+}
+
+.container a {
+  color: var(--color-2);
+}
+
+.container-2 a {
+  color: var(--color-2);
 }
