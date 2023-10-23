@@ -54,7 +54,7 @@ h1 {
 .container-2 {
   color: var(--color-2);
   margin: 0 auto;
-  background-color: var(--color-1);
+  background-color: var(--color-4);
   width: 400px;
   height: 610px;
   border-radius: 3px;
