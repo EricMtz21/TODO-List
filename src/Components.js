@@ -1,6 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function MyButton({ text }) {
   return (
@@ -28,7 +29,7 @@ function MyCheckBox({ text }) {
   )
 }
 
-function SignUp() {
+export function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
 
   const handleCheckBoxChange = () => {
@@ -71,14 +72,14 @@ function SignUp() {
           <MyButton text="Sign up" />
           <br></br>
           <p>Already have an account?</p>
-          <a href="#">Log in</a>
+          <Link to="../">Log in</Link>
         </div>
       </div>
     </div>
   )
 }
 
-function LogIn() {
+export function LogIn() {
   return (
     <div className="session">
       <div className="container">
@@ -94,7 +95,7 @@ function LogIn() {
           <MyButton text="Log in" />
           <br></br>
           <p>Don't have an account?</p>
-          <a href="#">Sign up</a>
+          <Link to="/signup">Sign up</Link>
         </div>
       </div>
     </div>
